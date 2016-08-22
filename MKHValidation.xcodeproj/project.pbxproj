@@ -8,21 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		2727DAE5A10C9A4DBF8CB111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285C09CD5DEBE88988DE99FD /* Foundation.framework */; };
+		32A2B68F750583AD0CA67CBC /* Pods_MKHValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65302B43CA1A0D7500F1FDF7 /* Pods_MKHValidation.framework */; };
 		4D7B977BDF7ADDFAE14C03EE /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ADBC8502ED011E14493501 /* Main.swift */; };
 		772DFA89C1611778C2655F4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683358487DB09DA6D1415821 /* UIKit.framework */; };
-		8A76E03EFC28233116FD4FEE /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FDE36D4F634B7037F83516 /* Main.swift */; };
+		8A76E03EFC28233116FD4FEE /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FDE36D4F634B7037F83516 /* ValidationRule.swift */; };
+		94B542091D6B81ED006E1D4C /* ValidationRule+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B542081D6B81ED006E1D4C /* ValidationRule+Async.swift */; };
 		AD2CFE1DD4E980568384DA71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285C09CD5DEBE88988DE99FD /* Foundation.framework */; };
+		CE066C8CF4A279BDC3063BEE /* Pods_MKHValidationTst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770CCBA2955CBD25A6C39A86 /* Pods_MKHValidationTst.framework */; };
 		D59B9B55E816478601E2696C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683358487DB09DA6D1415821 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A3F999E493B3735DBCAE4BA /* MKHValidation. */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MKHValidation.; path = MKHValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A3F999E493B3735DBCAE4BA /* MKHValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKHValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C519DEBC0A899D9848359B /* Pods-MKHValidation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKHValidation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MKHValidation/Pods-MKHValidation.debug.xcconfig"; sourceTree = "<group>"; };
 		285C09CD5DEBE88988DE99FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		539FE166C1F50BB1809870CA /* Pods-MKHValidationTst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKHValidationTst.release.xcconfig"; path = "Pods/Target Support Files/Pods-MKHValidationTst/Pods-MKHValidationTst.release.xcconfig"; sourceTree = "<group>"; };
+		65302B43CA1A0D7500F1FDF7 /* Pods_MKHValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKHValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		683358487DB09DA6D1415821 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		86FDE36D4F634B7037F83516 /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		6F2289651D6F59B5009DEA7C /* Pods-MKHValidationTst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKHValidationTst.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MKHValidationTst/Pods-MKHValidationTst.debug.xcconfig"; sourceTree = "<group>"; };
+		770CCBA2955CBD25A6C39A86 /* Pods_MKHValidationTst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKHValidationTst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86FDE36D4F634B7037F83516 /* ValidationRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		90ADBC8502ED011E14493501 /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		94B542081D6B81ED006E1D4C /* ValidationRule+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ValidationRule+Async.swift"; sourceTree = "<group>"; };
 		9B1865FF57E5A6CBE4640AB7 /* MKHValidationTst.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKHValidationTst.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB35E2EB8213630F96B82817 /* MKHValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKHValidation.h; sourceTree = "<group>"; };
+		DA8BDD29B34A0A329A965DA2 /* Pods-MKHValidation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKHValidation.release.xcconfig"; path = "Pods/Target Support Files/Pods-MKHValidation/Pods-MKHValidation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,7 @@
 			files = (
 				2727DAE5A10C9A4DBF8CB111 /* Foundation.framework in Frameworks */,
 				772DFA89C1611778C2655F4C /* UIKit.framework in Frameworks */,
+				32A2B68F750583AD0CA67CBC /* Pods_MKHValidation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,12 +52,24 @@
 			files = (
 				AD2CFE1DD4E980568384DA71 /* Foundation.framework in Frameworks */,
 				D59B9B55E816478601E2696C /* UIKit.framework in Frameworks */,
+				CE066C8CF4A279BDC3063BEE /* Pods_MKHValidationTst.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01E6AD6465A5ECA8A48AB30F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11C519DEBC0A899D9848359B /* Pods-MKHValidation.debug.xcconfig */,
+				DA8BDD29B34A0A329A965DA2 /* Pods-MKHValidation.release.xcconfig */,
+				6F2289651D6F59B5009DEA7C /* Pods-MKHValidationTst.debug.xcconfig */,
+				539FE166C1F50BB1809870CA /* Pods-MKHValidationTst.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		05918FD55A5A4B488D291D86 /* Src-Extra */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				2304E9DEBDCB8A4B7706E5EB /* iOS */,
+				65302B43CA1A0D7500F1FDF7 /* Pods_MKHValidation.framework */,
+				770CCBA2955CBD25A6C39A86 /* Pods_MKHValidationTst.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,13 +113,15 @@
 				5FCA4A63B670E7BF4E80A7E0 /* Src */,
 				05918FD55A5A4B488D291D86 /* Src-Extra */,
 				25D443FA1605547F914B3D16 /* Frameworks */,
+				01E6AD6465A5ECA8A48AB30F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		5FCA4A63B670E7BF4E80A7E0 /* Src */ = {
 			isa = PBXGroup;
 			children = (
-				86FDE36D4F634B7037F83516 /* Main.swift */,
+				86FDE36D4F634B7037F83516 /* ValidationRule.swift */,
+				94B542081D6B81ED006E1D4C /* ValidationRule+Async.swift */,
 			);
 			path = Src;
 			sourceTree = "<group>";
@@ -103,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9B1865FF57E5A6CBE4640AB7 /* MKHValidationTst.xctest */,
-				0A3F999E493B3735DBCAE4BA /* MKHValidation. */,
+				0A3F999E493B3735DBCAE4BA /* MKHValidation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,8 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA4F83F74982A2EF61480D3A /* Build configuration list for PBXNativeTarget "MKHValidationTst" */;
 			buildPhases = (
+				E4B5E7467C5072E0FB39BD96 /* [CP] Check Pods Manifest.lock */,
 				151E2377B437D0E582E6BCE3 /* Sources */,
 				AA2965EC105C5C26DE5B57A3 /* Frameworks */,
+				34C61F67D794F29BC82A7127 /* [CP] Embed Pods Frameworks */,
+				25BEFF1769F8CEE0BA614E07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,8 +161,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23D5E7D526408161AE8A83BB /* Build configuration list for PBXNativeTarget "MKHValidation" */;
 			buildPhases = (
+				432925C184132FA8443D0127 /* [CP] Check Pods Manifest.lock */,
 				F1F5EC212BB02CAAD3FA11C6 /* Sources */,
 				763149081327A7277EE33B30 /* Frameworks */,
+				9D2ECE4B05097820D289ED61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,7 +172,7 @@
 			);
 			name = MKHValidation;
 			productName = MKHValidation;
-			productReference = 0A3F999E493B3735DBCAE4BA /* MKHValidation. */;
+			productReference = 0A3F999E493B3735DBCAE4BA /* MKHValidation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -171,6 +203,84 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25BEFF1769F8CEE0BA614E07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MKHValidationTst/Pods-MKHValidationTst-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34C61F67D794F29BC82A7127 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MKHValidationTst/Pods-MKHValidationTst-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		432925C184132FA8443D0127 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D2ECE4B05097820D289ED61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MKHValidation/Pods-MKHValidation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4B5E7467C5072E0FB39BD96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		151E2377B437D0E582E6BCE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -184,7 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A76E03EFC28233116FD4FEE /* Main.swift in Sources */,
+				8A76E03EFC28233116FD4FEE /* ValidationRule.swift in Sources */,
+				94B542091D6B81ED006E1D4C /* ValidationRule+Async.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +304,7 @@
 /* Begin XCBuildConfiguration section */
 		214515C3A89DDFB3BF1B2C74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539FE166C1F50BB1809870CA /* Pods-MKHValidationTst.release.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -209,6 +321,7 @@
 		};
 		8E06CD0B507A36E60D314613 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F2289651D6F59B5009DEA7C /* Pods-MKHValidationTst.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -276,6 +389,7 @@
 		};
 		D46C6D69072ADD838EB1DCF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8BDD29B34A0A329A965DA2 /* Pods-MKHValidation.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -303,6 +417,7 @@
 		};
 		F8BBF99D04C9CA70F5D193D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11C519DEBC0A899D9848359B /* Pods-MKHValidation.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
