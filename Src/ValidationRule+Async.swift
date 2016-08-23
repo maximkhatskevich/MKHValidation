@@ -6,22 +6,22 @@
 //  Copyright © 2016 Maxim Khatskevich. All rights reserved.
 //
 
-//import Nimble
-
-//===
-
 public
 final
-class ValidationRuleAsync<Value>: ValidationRuleBase
+class ValidationRuleAsync<Value>
 {
+    public
+    let name: String
+    
     public
     let value: Value
     
     //===
     
     public
-    init(value: Value)
+    init(name: String, value: Value)
     {
+        self.name = name
         self.value = value
     }
     
@@ -48,18 +48,18 @@ extension ValidationRuleAsync
         isValid = false
     }
     
-    public
     func validate() throws
     {
         if
             isValid ?? false
         {
-            // "isValid" is already set (not nil) and "true",
             // everything is good, don't do anything
         }
         else
         {
-            throw ValidationError(message: self.dynamicType.errorDescription())
+            throw
+                InvalidValue(
+                    ruleDescription: name)
         }
     }
     
