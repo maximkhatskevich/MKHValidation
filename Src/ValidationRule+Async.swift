@@ -49,12 +49,12 @@ extension ValidationRuleAsync
     }
     
     public
-    func validate() throws
+    func validate() throws -> Value
     {
         if
             isValid ?? false
         {
-            // everything is good, don't do anything
+            return value
         }
         else
         {
