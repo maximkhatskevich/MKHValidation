@@ -49,12 +49,12 @@ extension ValidationRule
     }
     
     static
-    func validate(value: Value) throws
+    func validate(value: Value) throws -> Value
     {
         if
             isValid(value)
         {
-            // everything is good, don't do anything
+            return value
         }
         else
         {
@@ -65,7 +65,7 @@ extension ValidationRule
     }
     
     static
-    func validateAny<T>(value: T) throws
+    func validateAny<T>(value: T) throws -> Value
     {
         guard
             let typedValue = value as? Value
@@ -80,6 +80,6 @@ extension ValidationRule
         
         //===
         
-        try validate(typedValue)
+        return try validate(typedValue)
     }
 }
