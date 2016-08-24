@@ -34,7 +34,7 @@ platform :ios do
     # default initial location for any command
     # is inside 'Fastlane' folder
 
-    sh 'cd ./.. && xcake make'
+    sh 'cd ./.. && xcake make && pod update'
 
   end
 

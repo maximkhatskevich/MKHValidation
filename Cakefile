@@ -72,6 +72,8 @@ target do |target|
         # relies on proper/valid "PROVISIONING_PROFILE" value:
         configuration.settings["CODE_SIGN_IDENTITY[sdk=iphoneos*]"] = nil
 
+        #===
+
         # configuration.settings["SWIFT_VERSION"] = currentSwiftVersion # Xcode 8
 
     end
