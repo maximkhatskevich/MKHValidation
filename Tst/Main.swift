@@ -8,8 +8,10 @@
 
 import XCTest
 
-// @testable
+@testable
 import MKHValidation
+
+import MKHHelpers
 
 //===
 
@@ -27,64 +29,74 @@ class MKHValidationTst: XCTestCase
     
     enum Spec
     {
-        enum User
+        enum User: ValidationRule // context for the nested rules
         {
-            enum FirstName: ValidationRule
+            static
+            func isValid(userDraft: UserDraft?) -> Bool
+            {
+                return FirstNameNonEmpty.isValid(userDraft?.firstName)
+                    && LastNameAny.isValid(userDraft?.lastName)
+                    && LoginIsValidEmail.isValid(userDraft?.login)
+                    && PasswordComplexEnough.isValid(userDraft?.password)
+            }
+            
+            //===
+            
+            enum FirstNameNonEmpty: ValidationRule
             {
                 static
-                func isValid(value: String?) -> Bool
+                func isValid(firstName: String?) -> Bool
                 {
                     // any non-empty value is OK
                     
-                    return value?.characters.count > 0
+                    return firstName?.characters.count > 0
                 }
             }
-//
-//            enum LastName: ValidationRule
-//            {
-//                static
-//                    func isValid(_: String?) -> Bool
-//                {
-//                    // ANY value is OK
-//                    
-//                    return YES
-//                }
-//            }
-//            
-//            enum Login
-//            {
-//                static
-//                    func isValid(login: String) -> Bool
-//                {
-//                    return login.isValidEmail()
-//                }
-//            }
-//            
-//            enum Password
-//            {
-//                static
-//                let minimalLength = 6
-//                
-//                //===
-//                
-//                static
-//                    func isValid(password: String) -> Bool
-//                {
-//                    return (password.characters.count >= minimalLength)
-//                }
-//            }
+
+            enum LastNameAny: ValidationRule
+            {
+                static
+                func isValid(lastName: String?) -> Bool
+                {
+                    // ANY value is OK
+                    
+                    return YES
+                }
+            }
+            
+            enum LoginIsValidEmail
+            {
+                static
+                func isValid(login: String?) -> Bool
+                {
+                    return login.map{ $0.isValidEmail() } ?? false
+                }
+            }
+            
+            enum PasswordComplexEnough
+            {
+                static
+                let minimalLength = 6
+                
+                //===
+                
+                static
+                func isValid(password: String?) -> Bool
+                {
+                    return (password?.characters.count >= minimalLength)
+                }
+            }
         }
     }
     
     //===
     
-    func testExample()
+    func testFirstNameValidation()
     {
-        XCTAssertTrue(Spec.User.FirstName.isValid(nil), Spec.User.FirstName.errorDescription())
+        let r = Spec.User.FirstNameNonEmpty.self
+        
+        XCTAssertFalse(r.isValid(nil), r.description())
+        XCTAssertFalse(r.isValid(""), r.description())
+        XCTAssertTrue(r.isValid("Max"), r.description())
     }
-    
-//    func describeError(errorDesc: String, funcName: String = #function) -> String
-//    {
-//        return "\(funcName) :: \(errorDesc)"
-//    }
 }

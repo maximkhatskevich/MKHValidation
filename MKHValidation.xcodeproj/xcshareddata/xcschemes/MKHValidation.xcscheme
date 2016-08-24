@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CFD1AE23B93FA0F75F81B167"
+               BlueprintIdentifier = "288B3C9FD8EAE058A6B42FD5"
                BuildableName = "MKHValidation.framework"
                BlueprintName = "MKHValidation"
                ReferencedContainer = "container:MKHValidation.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D091FE2049BD38B66C66C5F"
+               BlueprintIdentifier = "F689BED30E5376473F12CB0B"
                BuildableName = "MKHValidationTst.xctest"
                BlueprintName = "MKHValidationTst"
                ReferencedContainer = "container:MKHValidation.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CFD1AE23B93FA0F75F81B167"
+            BlueprintIdentifier = "288B3C9FD8EAE058A6B42FD5"
             BuildableName = "MKHValidation.framework"
             BlueprintName = "MKHValidation"
             ReferencedContainer = "container:MKHValidation.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CFD1AE23B93FA0F75F81B167"
+            BlueprintIdentifier = "288B3C9FD8EAE058A6B42FD5"
             BuildableName = "MKHValidation.framework"
             BlueprintName = "MKHValidation"
             ReferencedContainer = "container:MKHValidation.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CFD1AE23B93FA0F75F81B167"
+            BlueprintIdentifier = "288B3C9FD8EAE058A6B42FD5"
             BuildableName = "MKHValidation.framework"
             BlueprintName = "MKHValidation"
             ReferencedContainer = "container:MKHValidation.xcodeproj">

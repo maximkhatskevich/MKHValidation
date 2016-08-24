@@ -48,6 +48,7 @@ extension ValidationRuleAsync
         isValid = false
     }
     
+    public
     func validate() throws
     {
         if
@@ -62,11 +63,4 @@ extension ValidationRuleAsync
                     ruleDescription: name)
         }
     }
-    
-//    public
-//    func assert()
-//    {
-//        expect(self.isValid)
-//            .to(equal(true), description: self.dynamicType.errorDescription())
-//    }
 }

@@ -13,8 +13,6 @@ target 'MKHValidation' do
 
 	platform :ios, '8.4'
 
-	pod 'Nimble'
-
 	#===
 
 	target 'MKHValidationTst' do
@@ -23,7 +21,7 @@ target 'MKHValidation' do
 
 		#===
 
-		# pod 'Spectre', '~> 0.6'
+		pod 'MKHHelpers', :path => './../MKHHelpers' #, :git => 'https://github.com/maximkhatskevich/MKHHelpers.git'
 	end
 
 end

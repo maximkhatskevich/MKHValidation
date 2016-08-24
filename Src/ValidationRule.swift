@@ -82,11 +82,4 @@ extension ValidationRule
         
         try validate(typedValue)
     }
-    
-//    static
-//    func assert(v: Value)
-//    {
-//        expect(isValid(v))
-//            .to(equal(true), description: errorDescription())
-//    }
 }
