@@ -59,8 +59,7 @@ extension ValidationRuleAsync
         else
         {
             throw
-                InvalidValue(
-                    ruleDescription: name)
+                InvalidValue()
         }
     }
 }

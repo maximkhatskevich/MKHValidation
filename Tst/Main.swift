@@ -99,4 +99,119 @@ class MKHValidationTst: XCTestCase
         XCTAssertFalse(r.isValid(""), r.description())
         XCTAssertTrue(r.isValid("Max"), r.description())
     }
+    
+    //===
+    
+    
+    struct MyUser
+    {
+        let someConstantValue = ValueWrapper(3)
+        
+        let firstName = ValueWrapper<String> { $0?.characters.count > 0 }
+    }
+    
+    //===
+    
+    func testSomeConstantValueWrapper()
+    {
+        let u = MyUser()
+        
+        XCTAssertTrue(u.someConstantValue.isValid())
+        XCTAssertEqual(u.someConstantValue.value!, 3)
+    }
+    
+    func testFirstNameValueWrapper()
+    {
+        let u = MyUser()
+        
+        //===
+        
+        XCTAssertTrue(u.firstName.value == nil)
+        XCTAssertFalse(u.firstName.isValid())
+        
+        //===
+        
+        do
+        {
+            try u.firstName.setValue(5)
+            XCTFail("Should not get here ever")
+        }
+        catch
+        {
+            XCTAssertTrue(error.dynamicType == InvalidValue.self)
+        }
+        
+        //===
+        
+        XCTAssertTrue(u.firstName.value == nil)
+        XCTAssertFalse(u.firstName.isValid())
+        
+        //===
+        
+        do
+        {
+            let tmp: String? = nil
+            try u.firstName.setValue(tmp)
+            XCTFail("Should not get here ever")
+        }
+        catch
+        {
+            XCTAssertTrue(error.dynamicType == InvalidValue.self)
+        }
+        
+        //===
+        
+        XCTAssertTrue(u.firstName.value == nil)
+        XCTAssertFalse(u.firstName.isValid())
+        
+        //===
+        
+        do
+        {
+            try u.firstName.setValue("")
+            XCTFail("Should not get here ever")
+        }
+        catch
+        {
+            XCTAssertTrue(error.dynamicType == InvalidValue.self)
+        }
+        
+        //===
+        
+        XCTAssertTrue(u.firstName.value == nil)
+        XCTAssertFalse(u.firstName.isValid())
+        
+        //===
+        
+        do
+        {
+            try u.firstName.setValue("Max")
+        }
+        catch
+        {
+            XCTFail("Should not get here ever")
+        }
+        
+        //===
+        
+        XCTAssertEqual(u.firstName.value!, "Max")
+        XCTAssertTrue(u.firstName.isValid())
+        
+        //===
+        
+        do
+        {
+            try u.firstName.setValue("Alex")
+            XCTFail("Should not get here ever")
+        }
+        catch
+        {
+            XCTAssertTrue(error.dynamicType == ViolateImmutabilityErr.self)
+        }
+        
+        //===
+        
+        XCTAssertEqual(u.firstName.value!, "Max")
+        XCTAssertTrue(u.firstName.isValid())
+    }
 }
