@@ -6,23 +6,6 @@
 //  Copyright © 2016 Maxim Khatskevich. All rights reserved.
 //
 
-public
-protocol ValidationError: ErrorType { }
-
-public
-struct TypeMismatch: ValidationError
-{
-    let actualType: Any.Type
-    let expectedType: Any.Type
-    let ruleDescription: String
-}
-
-public
-struct InvalidValue: ValidationError
-{
-    let ruleDescription: String
-}
-
 //=== MARK: ValidationRule
 
 public
@@ -59,8 +42,7 @@ extension ValidationRule
         else
         {
             throw
-                InvalidValue(
-                    ruleDescription: description())
+                InvalidValue()
         }
     }
     
@@ -72,10 +54,7 @@ extension ValidationRule
         else
         {
             throw
-                TypeMismatch(
-                    actualType: T.self,
-                    expectedType: Value.self,
-                    ruleDescription: description())
+                InvalidValue()
         }
         
         //===

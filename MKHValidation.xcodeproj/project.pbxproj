@@ -11,6 +11,8 @@
 		25CF3AA551CC04056CFD42C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511438E6CAE15CF558DF75A0 /* Foundation.framework */; };
 		28F620038BB4803BC4B9010E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF22EAC7936A9C9E59A647B /* UIKit.framework */; };
 		90C0A2214E8AD9C54FAA1DC7 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559675DE6081BBB048EC7530 /* Main.swift */; };
+		946AFF7F1D71122100D98F1A /* ValueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946AFF7E1D71122100D98F1A /* ValueWrapper.swift */; };
+		946AFF811D711B8100D98F1A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946AFF801D711B8100D98F1A /* Errors.swift */; };
 		AFC44F63B957764F6F9388E5 /* Pods_MKHValidationTst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0DAF7066E865BCFAB2432A /* Pods_MKHValidationTst.framework */; };
 		B24FC5BF2E13A154516E6C96 /* Pods_MKHValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B54F25AB8F76922BB52133F /* Pods_MKHValidation.framework */; };
 		C08A324676D59DF529C493E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF22EAC7936A9C9E59A647B /* UIKit.framework */; };
@@ -28,6 +30,8 @@
 		559675DE6081BBB048EC7530 /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		56730260439EFD974C379E57 /* MKHValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKHValidation.h; sourceTree = "<group>"; };
 		9094317DE51A10895950871F /* ValidationRule+Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ValidationRule+Async.swift"; sourceTree = "<group>"; };
+		946AFF7E1D71122100D98F1A /* ValueWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueWrapper.swift; sourceTree = "<group>"; };
+		946AFF801D711B8100D98F1A /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		996BACEFD3710E2EA6EBE0E4 /* Pods-MKHValidationTst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKHValidationTst.release.xcconfig"; path = "Pods/Target Support Files/Pods-MKHValidationTst/Pods-MKHValidationTst.release.xcconfig"; sourceTree = "<group>"; };
 		B5BA127CA44203B7C9223B94 /* MKHValidation. */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MKHValidation.; path = MKHValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F7E337AA7992D0CDBF0909 /* MKHValidationTst.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKHValidationTst.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +97,8 @@
 			children = (
 				9094317DE51A10895950871F /* ValidationRule+Async.swift */,
 				ED1A5A3E585E15418EFC17D6 /* ValidationRule.swift */,
+				946AFF7E1D71122100D98F1A /* ValueWrapper.swift */,
+				946AFF801D711B8100D98F1A /* Errors.swift */,
 			);
 			path = Src;
 			sourceTree = "<group>";
@@ -294,6 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946AFF811D711B8100D98F1A /* Errors.swift in Sources */,
+				946AFF7F1D71122100D98F1A /* ValueWrapper.swift in Sources */,
 				D9AB614D320FCE3DACFD2EBF /* ValidationRule+Async.swift in Sources */,
 				CDC4510C5063C41E8263A28B /* ValidationRule.swift in Sources */,
 			);
