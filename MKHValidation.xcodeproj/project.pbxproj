@@ -33,7 +33,7 @@
 		9DB3C8DDB013CF344DAAD7BE /* MKHValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKHValidation.h; sourceTree = "<group>"; };
 		A037C35F0C5458ED4CDB988D /* ValidationRule+Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ValidationRule+Async.swift"; sourceTree = "<group>"; };
 		A2CCC06525D1962885DAE577 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B386BD72F755A26FD67EDCF2 /* MKHValidation. */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MKHValidation.; path = MKHValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B386BD72F755A26FD67EDCF2 /* MKHValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKHValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE2CB2E0C6BB687623B0264 /* MKHValidationTst.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKHValidationTst.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E66E22689D57C637A69822 /* Pods-MKHValidationTst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKHValidationTst.release.xcconfig"; path = "Pods/Target Support Files/Pods-MKHValidationTst/Pods-MKHValidationTst.release.xcconfig"; sourceTree = "<group>"; };
 		F2A0A4F0F0C967331382831B /* Pods_MKHValidationTst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKHValidationTst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				CBE2CB2E0C6BB687623B0264 /* MKHValidationTst.xctest */,
-				B386BD72F755A26FD67EDCF2 /* MKHValidation. */,
+				B386BD72F755A26FD67EDCF2 /* MKHValidation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 			);
 			name = MKHValidation;
 			productName = MKHValidation;
-			productReference = B386BD72F755A26FD67EDCF2 /* MKHValidation. */;
+			productReference = B386BD72F755A26FD67EDCF2 /* MKHValidation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9B1F7976E9C6BD92F182819A /* MKHValidationTst */ = {
@@ -194,6 +194,7 @@
 				TargetAttributes = {
 					0915EB2F4F11BEDF15601B2A = {
 						DevelopmentTeam = UJA88X59XP;
+						ProvisioningStyle = Automatic;
 					};
 					9B1F7976E9C6BD92F182819A = {
 						DevelopmentTeam = UJA88X59XP;
@@ -341,7 +342,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -388,13 +389,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 863C3BFD154914990550DAA4 /* Pods-MKHValidation.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UJA88X59XP;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 4;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -419,13 +420,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C65009E6E4E7C616B8B3A06 /* Pods-MKHValidation.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UJA88X59XP;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 4;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -488,7 +489,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
