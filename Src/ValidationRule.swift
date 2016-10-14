@@ -28,11 +28,11 @@ extension ValidationRule
     static
     func description() -> String
     {
-        return String(self)
+        return String(describing: self)
     }
     
     static
-    func validate(value: Value) throws -> Value
+    func validate(_ value: Value) throws -> Value
     {
         if
             isValid(value)
@@ -41,20 +41,18 @@ extension ValidationRule
         }
         else
         {
-            throw
-                InvalidValue()
+            throw InvalidValue()
         }
     }
     
     static
-    func validateAny<T>(value: T) throws -> Value
+    func validateAny<T>(_ value: T) throws -> Value
     {
         guard
             let typedValue = value as? Value
         else
         {
-            throw
-                InvalidValue()
+            throw InvalidValue()
         }
         
         //===

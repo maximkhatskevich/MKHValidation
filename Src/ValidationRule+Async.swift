@@ -27,7 +27,7 @@ class ValidationRuleAsync<Value>
     
     //===
     
-    public private(set) // fileprivate
+    public fileprivate(set)
     var isValid: Bool?
 }
 
@@ -58,8 +58,7 @@ extension ValidationRuleAsync
         }
         else
         {
-            throw
-                InvalidValue()
+            throw InvalidValue()
         }
     }
 }

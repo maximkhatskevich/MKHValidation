@@ -32,7 +32,7 @@ class MKHValidationTst: XCTestCase
         enum User: ValidationRule // context for the nested rules
         {
             static
-            func isValid(userDraft: UserDraft?) -> Bool
+            func isValid(_ userDraft: UserDraft?) -> Bool
             {
                 return FirstNameNonEmpty.isValid(userDraft?.firstName)
                     && LastNameAny.isValid(userDraft?.lastName)
@@ -45,31 +45,39 @@ class MKHValidationTst: XCTestCase
             enum FirstNameNonEmpty: ValidationRule
             {
                 static
-                func isValid(firstName: String?) -> Bool
+                func isValid(_ firstName: String?) -> Bool
                 {
                     // any non-empty value is OK
                     
-                    return firstName?.characters.count > 0
+                    if
+                        let firstName = firstName
+                    {
+                        return firstName.characters.count > 0
+                    }
+                    else
+                    {
+                        return NO
+                    }
                 }
             }
 
             enum LastNameAny: ValidationRule
             {
                 static
-                func isValid(lastName: String?) -> Bool
+                func isValid(_ lastName: String?) -> Bool
                 {
                     // ANY value is OK
                     
-                    return YES
+                    return true
                 }
             }
             
             enum LoginIsValidEmail
             {
                 static
-                func isValid(login: String?) -> Bool
+                func isValid(_ login: String?) -> Bool
                 {
-                    return login.map{ $0.isValidEmail() } ?? false
+                    return login.map{ $0.isValidEmail() } ?? NO
                 }
             }
             
@@ -81,9 +89,9 @@ class MKHValidationTst: XCTestCase
                 //===
                 
                 static
-                func isValid(password: String?) -> Bool
+                func isValid(_ password: String?) -> Bool
                 {
-                    return (password?.characters.count >= minimalLength)
+                    return password.map{ $0.characters.count >= minimalLength } ?? NO
                 }
             }
         }
@@ -105,9 +113,9 @@ class MKHValidationTst: XCTestCase
     
     struct MyUser
     {
-        let someConstantValue = ValueWrapper(3)
+        let someConstantValue = ValueWrapper(constant: 3)
         
-        let firstName = ValueWrapper<String> { $0?.characters.count > 0 }
+        let firstName = ValueWrapper<String>{ $0.characters.count > 0 }
     }
     
     //===
@@ -138,7 +146,7 @@ class MKHValidationTst: XCTestCase
         }
         catch
         {
-            XCTAssertTrue(error.dynamicType == InvalidValue.self)
+            XCTAssertTrue(type(of: error) == InvalidValue.self)
         }
         
         //===
@@ -156,7 +164,7 @@ class MKHValidationTst: XCTestCase
         }
         catch
         {
-            XCTAssertTrue(error.dynamicType == InvalidValue.self)
+            XCTAssertTrue(type(of: error) == InvalidValue.self)
         }
         
         //===
@@ -173,7 +181,7 @@ class MKHValidationTst: XCTestCase
         }
         catch
         {
-            XCTAssertTrue(error.dynamicType == InvalidValue.self)
+            XCTAssertTrue(type(of: error) == InvalidValue.self)
         }
         
         //===
@@ -206,7 +214,7 @@ class MKHValidationTst: XCTestCase
         }
         catch
         {
-            XCTAssertTrue(error.dynamicType == ViolateImmutabilityErr.self)
+            XCTAssertTrue(type(of: error) == MutabilityViolation.self)
         }
         
         //===

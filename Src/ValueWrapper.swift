@@ -10,38 +10,56 @@ public
 final
 class ValueWrapper<Value>
 {
-    private(set)
+    public fileprivate(set)
     var value: Value? = nil // you can force to have non-nil value in the validator
+    
+    fileprivate
+    var valueSetOnce = false
     
     public
     let mutable: Bool
     
-    private
+    fileprivate
     let validator: (Value?) -> Bool
     
     //===
     
     public
     init(
-        _ value: Value? = nil,
-        mutable: Bool = false, // immutable by default - allows to set value only once
-        validator: (Value?) -> Bool
-        )
+        mutable: Bool,
+        validator: @escaping (Value?) -> Bool)
     {
-        self.value = value
         self.mutable = mutable
         self.validator = validator
     }
     
+    
     public
-    init(_ value: Value?)
+    init(initialValue: Value?,
+         validator: @escaping (Value?) -> Bool)
+    {
+        self.value = initialValue
+        self.mutable = true
+        self.validator =  validator
+    }
+    
+    public
+    init(constant value: Value?)
     {
         self.value = value
-        
-        //===
-        
-        self.mutable = false // immutable by default - allows to set value only once
-        self.validator = { _ in return true } // accept any value by default
+        self.valueSetOnce = true
+        self.mutable = false
+        self.validator =  { _ in return true }
+    }
+    
+    public
+    init(
+        mutable: Bool = false,
+        acceptNil: Bool = false,
+        validator: @escaping (Value) -> Bool)
+    {
+        self.mutable = mutable
+        self.validator = { $0.map(validator) ?? acceptNil }
     }
 }
 
@@ -50,15 +68,13 @@ class ValueWrapper<Value>
 public
 extension ValueWrapper
 {
-    func setValue<T>(externalValue: T?) throws
+    func setValue<T>(_ externalValue: T?) throws
     {
         guard
-            (value == nil) ||
-            ((value != nil) && mutable)
+            !valueSetOnce || mutable
         else
         {
-            throw
-                ViolateImmutabilityErr()
+            throw MutabilityViolation()
         }
         
         //===
@@ -78,6 +94,7 @@ extension ValueWrapper
         //===
         
         value = newValue
+        valueSetOnce = true
     }
 }
 
@@ -91,8 +108,9 @@ extension ValueWrapper
         return validator(value)
     }
     
-    func isValid<T>(externalValue: T) -> Bool
+    func mightBeSet<T>(with externalValue: T) -> Bool
     {
-        return validator(externalValue as? Value)
+        return !valueSetOnce
+            && validator(externalValue as? Value)
     }
 }
