@@ -80,7 +80,7 @@ target do |target|
 
         #===
 
-        configuration.settings["SWIFT_VERSION"] = currentSwiftVersion # Xcode 8
+        configuration.settings["SWIFT_VERSION"] = currentSwiftVersion.to_s # Xcode 8
 
     end
 
@@ -104,7 +104,7 @@ target do |target|
 
             configuration.settings["LD_RUNPATH_SEARCH_PATHS"] = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks"
 
-            configuration.settings["SWIFT_VERSION"] = currentSwiftVersion # Xcode 8
+            configuration.settings["SWIFT_VERSION"] = currentSwiftVersion.to_s # Xcode 8
 
 	        # Xcode 8 automati c signing support
 	        configuration.settings["CODE_SIGN_IDENTITY[sdk=iphoneos*]"] = "iPhone Developer"
