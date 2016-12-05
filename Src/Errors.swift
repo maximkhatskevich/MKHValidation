@@ -7,12 +7,9 @@
 //
 
 public
-protocol ValueWrapperError: Error { }
+protocol ValidationRuleError: Error { }
 
 //===
 
 public
-struct MutabilityViolation: ValueWrapperError { }
-
-public
-struct InvalidValue: ValueWrapperError { }
+struct InvalidValue: ValidationRuleError { }
