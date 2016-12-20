@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                      = 'MKHValidation'
-  s.version                   = '1.1.0'
+  s.version                   = '1.2.0'
   s.summary                   = 'Validation helpers.'
   s.homepage                  = 'https://github.com/maximkhatskevich/#{s.name}'
 
